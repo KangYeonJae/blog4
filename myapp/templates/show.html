@@ -30,3 +30,15 @@
 </body>
 </html>
  
+<h4><a href="{% url 'post' %}">무엇이든지 물어보세요!</a></h4>
+{% for myapp in myapps.all %}
+     <div class="container">
+        <a href="{% url 'detail' myapp.id %}">
+            TITLE: {{myapp.title}}
+        </a>
+        <p>---{{myapp.body}}</p>
+
+        <small class="text-muted">{{myapp.pub_date}}</small>
+    </div>
+    
+{%endfor%}

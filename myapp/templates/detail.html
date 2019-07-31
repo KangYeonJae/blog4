@@ -1,0 +1,10 @@
+<div class="container" >
+    <a href="{% url 'show' %}">뒤로</a>
+    <a href ="{% url 'edit' pk=myapp.pk %}">글수정</a> <!--강조하기-->
+    <h1 style="color:rgb(46, 47, 117)">제목: {{ myapp.title }}</h1>   <!--색깔바꾸기-->
+    <p>내용: {{ myapp.body }}</p>
+    <form action="{% url 'delete' pk=myapp.pk %}">
+    <input type="submit"class="btn-group" value="삭제"/> <!--버튼모양추가-->
+    </form>
+</div>
+
